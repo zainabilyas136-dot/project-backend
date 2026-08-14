@@ -1,0 +1,22 @@
+import express from "express";
+import authRoutes from "./modules/auth.routes.js";
+import productRoutes from "./modules/product.routes.js";
+import categoryRoutes from "./modules/category.routes.js";
+import customerRoutes from "./modules/customer.routes.js";
+import orderRoutes from "./modules/order.routes.js";
+import stockReceiptRoutes from "./modules/stockReceipt.routes.js";
+import stockMovementRoutes from "./modules/stockMovement.routes.js";
+import reportRoutes from "./modules/report.routes.js";
+import userRoutes from "./modules/user.routes.js";
+
+const router = express.Router();
+router.use("/auth", authRoutes);
+router.use("/products", productRoutes);
+router.use("/categories", categoryRoutes);
+router.use("/customers", customerRoutes);
+router.use("/orders", orderRoutes);
+router.use("/stock-receipts", stockReceiptRoutes);
+router.use("/stock-movements", stockMovementRoutes);
+router.use("/reports", reportRoutes);
+router.use("/users", userRoutes);
+export default router;
